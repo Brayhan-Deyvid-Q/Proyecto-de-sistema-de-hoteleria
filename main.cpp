@@ -1,5 +1,5 @@
 #include<iostream>
-#include<windows.h>
+#include"habitaciones.h"
 using namespace std; 
 
 int main(){
@@ -23,6 +23,7 @@ int main(){
 	    	case 1:
 	    		break;
 	    	case 2:
+	    		habitacionesHotel();
 	    		break;
 	    	case 3:
 	    		break;
