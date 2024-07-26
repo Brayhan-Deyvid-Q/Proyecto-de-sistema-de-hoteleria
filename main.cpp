@@ -1,6 +1,7 @@
 #include <iostream>
 #include "clientes.h"
 #include "habitaciones.h"
+#include "reserva.h"
 using namespace std; 
 
 int main(){
@@ -28,6 +29,7 @@ int main(){
 	    		habitacionesHotel();
 	    		break;
 	    	case 3:
+	    		reservaHotel();
 	    		break;
 	    	case 4:
 	    		cout<<"Saliendo...";
