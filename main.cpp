@@ -1,5 +1,6 @@
-#include<iostream>
-#include"habitaciones.h"
+#include <iostream>
+#include "clientes.h"
+#include "habitaciones.h"
 using namespace std; 
 
 int main(){
@@ -21,6 +22,7 @@ int main(){
 	    
 	    switch(opcion){
 	    	case 1:
+	    		huespedHotel();
 	    		break;
 	    	case 2:
 	    		habitacionesHotel();
