@@ -25,30 +25,9 @@ Huesped huespedes[30] = {{"Franco Avalos", "982827837", "73728372"},
 					
 void agregarHuesped(int n_huesp, Huesped h){
 
-	cin.ignore();
-	
-	cout << "Digite el nombre: " << endl;
-	cin.getline(h.Nombre, 50);
-		
-	cout << "Digite el numero de telefono: " << endl;
-	cin.getline(h.Telefono, 50);
-		
-	cout << "Digite el numero de DNI: " << endl;
-	cin.getline(h.dni, 50);
-		
-	if (n_huesp >= 30){
-		
-		cout << "No se pueden añadir mas huespedes, el hotel el 'TELO' anda lleno" << endl;
-	}
-	
-	strcpy(huespedes[n_huesp].Nombre, h.Nombre);
-	strcpy(huespedes[n_huesp].Telefono, h.Telefono);
-	strcpy(huespedes[n_huesp].dni, h.dni);
-	
-	n_huesp++;
-	
-	cout << "El huesped fue agregado de manera exitosa. ";
 }
+
+
 
 void listarclientes(Huesped huespedes[30], int n_huesp){
      for(int i=0; i<n_huesp; i++){
