@@ -23,20 +23,18 @@ Huesped huespedes[30] = {{"Franco Avalos", "982827837", "73728372"},
 					
 					};
 					
-void agregarHuesped(){
-	Huesped h;
-	
-	int n_huesp = 8; //Huespedes actuales
+void agregarHuesped(int n_huesp, Huesped h){
+
 	cin.ignore();
 	
 	cout << "Digite el nombre: " << endl;
-	cin.getline(h.Nombre, 40);
+	cin.getline(h.Nombre, 50);
 		
 	cout << "Digite el numero de telefono: " << endl;
-	cin.getline(h.Telefono, 40);
+	cin.getline(h.Telefono, 50);
 		
 	cout << "Digite el numero de DNI: " << endl;
-	cin.getline(h.dni, 40);
+	cin.getline(h.dni, 50);
 		
 	if (n_huesp >= 30){
 		
@@ -52,9 +50,22 @@ void agregarHuesped(){
 	cout << "El huesped fue agregado de manera exitosa. ";
 }
 
+void listarclientes(Huesped huespedes[30], int n_huesp){
+     for(int i=0; i<n_huesp; i++){
+          cout<<"Huesped número "<<i<<" :"<<endl;
+          cout<<"Nombre: "<<huespedes[i].Nombre<<endl;
+          cout<<"Número: "<<huespedes[i].Telefono<<endl;
+          cout<<"Número de DNI: "<<huespedes[i].dni<<endl;
+	}
+}
+
 
 void huespedHotel(){
 	int opcion;
+	int n_huesp = 8; //Huespedes actuales (contador de huespedes)
+	
+	Huesped h;
+		
     do {
     	cout << "\n" << endl;
         cout << "1. Agregar cliente" << endl;
@@ -66,7 +77,7 @@ void huespedHotel(){
         // SWITCH PARA SELECIONAR LAS DIFERENTES OPCIONES DEL MENU CARTA
         switch (opcion) {
             case 1:
-            	agregarHuesped();
+            	agregarHuesped(n_huesp, h);
                 break;
             case 2:
                 
@@ -75,7 +86,7 @@ void huespedHotel(){
             	
                 break;
             case 4:
-                
+                listarclientes(huespedes, n_huesp);
                 break;
             case 5:
                 cout << "Regresando al menu inicial" << endl;
