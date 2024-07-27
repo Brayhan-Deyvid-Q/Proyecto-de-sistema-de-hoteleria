@@ -23,6 +23,7 @@ Huesped huespedes[30] = {{"Franco Avalos", "982827837", "73728372"},
 					};
 					
 void agregarHuesped(int &n_huesp, Huesped huespedes[]){
+	if (n_huesp<30){
 	cout<<"Ingrese el nombre del nuevo huesped: ";
 	cin>>huespedes[n_huesp].Nombre;
 	cout<<"Ingrese su número telefónico: ";
@@ -31,7 +32,20 @@ void agregarHuesped(int &n_huesp, Huesped huespedes[]){
 	cin>>huespedes[n_huesp].dni;
 	cout<<endl;
 	n_huesp++;
+	}else{
+		cout<<"El hotel se encuentra lleno en este momento";
+	}
+	
 }
+
+void eliminarCliente(int &n_huesp, Huesped huespedes[], int indice){
+	if (indice >= 0 && indice<n_huesp){
+		for(int i=indice; i<n_huesp;++i){
+			huespedes[i]=huespedes[i+1];
+		}
+	}
+}
+
 
 void listarclientes(Huesped huespedes[30], int n_huesp){
      for(int i=0; i<n_huesp; i++){
