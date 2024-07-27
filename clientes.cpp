@@ -11,7 +11,6 @@ char dni[50];
 
 };
 
-
 Huesped huespedes[30] = {{"Franco Avalos", "982827837", "73728372"},
 					{"Daniela Alvarez", "992932892", "48548934"},
 					{"Camila Roque", "938438231", "00565623"},
