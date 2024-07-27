@@ -5,18 +5,18 @@
 using namespace std; 
 
 int main(){
-	//Reserva reservahabitacion[30];//declaración de variable para registro de clientes
+	//Reserva reservahabitacion[30];//declaracion de variable para registro de clientes
 	int opcion;
 	
 	cout<<"\n----BIENVENIDOS AL HOTEL EL 'TELO'----\n"<<endl;
 	
-	while(opcion!=4){ //Impresión del menú en la pantalla
+	while(opcion!=4){ //Impresion del menu en la pantalla
 	
 	    cout<<"Seleccione una opcion:"<<endl;
 	    cout<<"1) Cliente"<<endl;
 	    cout<<"2) Habitaciones" << endl;
 	    cout<<"3) Reserva" << endl;
-	    cout<<"4) Salir del programa" << endl << endl;
+	    cout<<"4) Salir del programa" << endl;
 	    cout<<"Opcion: ";
 	    cin>>opcion;
 	    cout<<endl;
@@ -35,7 +35,7 @@ int main(){
 	    		cout<<"Saliendo...";
 	    		break;
 	    	default:
-	    			cout<<"ERROR: Alternativa no válida, intente de nuevo..."<<endl<<endl;
+	    			cout<<"ERROR: Alternativa no valida, intente de nuevo..."<<endl<<endl;
 	    		break;
 		}
     }

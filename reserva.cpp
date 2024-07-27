@@ -13,7 +13,7 @@ void reservaHotel(){
         cout << "4. Cancelar reservas" << endl;
         cout << "5. Mostrar reservas activas" << endl;
         cout << "6. Mostrar reservas activas" << endl;
-		cout << "6. Volver al menú principal" << endl;
+		cout << "7. Volver al menú principal" << endl;
 		
         cin >> opcion;
         // SWITCH PARA SELECIONAR LAS DIFERENTES OPCIONES DEL MENU CARTA
