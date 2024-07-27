@@ -11,8 +11,6 @@ char dni[10];
 
 };
 
-
-
 Huesped huespedes[30] = {{"Franco Avalos", "982827837", "73728372"},
 					{"Daniela Alvarez", "992932892", "48548934"},
 					{"Camila Roque", "938438231", "00565623"},
@@ -27,9 +25,9 @@ Huesped huespedes[30] = {{"Franco Avalos", "982827837", "73728372"},
 void agregarHuesped(int &n_huesp, Huesped huespedes[]){
 	cout<<"Ingrese el nombre del nuevo huesped: ";
 	cin>>huespedes[n_huesp].Nombre;
-	cout<<"Ingrese su número telefónico: ";
+	cout<<"Ingrese su nÃºmero telefÃ³nico: ";
 	cin>>huespedes[n_huesp].Telefono;
-	cout<<"Ingrese su número de DNI: ";
+	cout<<"Ingrese su nÃºmero de DNI: ";
 	cin>>huespedes[n_huesp].dni;
 	cout<<endl;
 	n_huesp++;
@@ -37,10 +35,10 @@ void agregarHuesped(int &n_huesp, Huesped huespedes[]){
 
 void listarclientes(Huesped huespedes[30], int n_huesp){
      for(int i=0; i<n_huesp; i++){
-          cout<<"Huesped número "<<i<<" :"<<endl;
+          cout<<"Huesped nÃºmero "<<i<<" :"<<endl;
           cout<<"Nombre: "<<huespedes[i].Nombre<<endl;
-          cout<<"Número: "<<huespedes[i].Telefono<<endl;
-          cout<<"Número de DNI: "<<huespedes[i].dni<<endl;
+          cout<<"NÃºmero: "<<huespedes[i].Telefono<<endl;
+          cout<<"NÃºmero de DNI: "<<huespedes[i].dni<<endl;
 	}
 }
 
