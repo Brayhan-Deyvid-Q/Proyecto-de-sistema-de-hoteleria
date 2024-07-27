@@ -1,13 +1,13 @@
 #include <iostream>
 #include "clientes.h"
-#include <string.h>
+#include <string>
 using namespace std;
 
 struct Huesped{
 
-char Nombre[50];
-char Telefono[50];
-char dni[50];
+char Nombre[30];
+char Telefono[10];
+char dni[10];
 
 };
 
@@ -22,18 +22,23 @@ Huesped huespedes[30] = {{"Franco Avalos", "982827837", "73728372"},
 					
 					};
 					
-void agregarHuesped(int n_huesp, Huesped h){
-
+void agregarHuesped(int &n_huesp, Huesped huespedes[]){
+	cout<<"Ingrese el nombre del nuevo huesped: ";
+	cin>>huespedes[n_huesp].Nombre;
+	cout<<"Ingrese su número telefónico: ";
+	cin>>huespedes[n_huesp].Telefono;
+	cout<<"Ingrese su número de DNI: ";
+	cin>>huespedes[n_huesp].dni;
+	cout<<endl;
+	n_huesp++;
 }
-
-
 
 void listarclientes(Huesped huespedes[30], int n_huesp){
      for(int i=0; i<n_huesp; i++){
-          cout<<"Huesped n�mero "<<i<<" :"<<endl;
+          cout<<"Huesped número "<<i<<" :"<<endl;
           cout<<"Nombre: "<<huespedes[i].Nombre<<endl;
-          cout<<"N�mero: "<<huespedes[i].Telefono<<endl;
-          cout<<"N�mero de DNI: "<<huespedes[i].dni<<endl;
+          cout<<"Número: "<<huespedes[i].Telefono<<endl;
+          cout<<"Número de DNI: "<<huespedes[i].dni<<endl;
 	}
 }
 
@@ -42,7 +47,6 @@ void huespedHotel(){
 	int opcion;
 	int n_huesp = 8; //Huespedes actuales (contador de huespedes)
 	
-	Huesped h;
 		
     do {
     	cout << "\n" << endl;
@@ -55,7 +59,7 @@ void huespedHotel(){
         // SWITCH PARA SELECIONAR LAS DIFERENTES OPCIONES DEL MENU CARTA
         switch (opcion) {
             case 1:
-            	agregarHuesped(n_huesp, h);
+            	agregarHuesped(n_huesp, huespedes);
                 break;
             case 2:
                 
