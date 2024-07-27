@@ -12,7 +12,7 @@ int main(){
 	
 	while(opcion!=4){ //Impresión del menú en la pantalla
 	
-	    cout<<"Seleccione una opcion:"<<endl<<endl;
+	    cout<<"Seleccione una opcion:"<<endl;
 	    cout<<"1) Cliente"<<endl;
 	    cout<<"2) Habitaciones" << endl;
 	    cout<<"3) Reserva" << endl;
