@@ -37,7 +37,7 @@ void agregarHuesped(int &n_huesp, Huesped huespedes[]){
 		cout<<"El hotel se encuentra lleno en este momento";
 	}
 	
-}
+} 
 
 void eliminarCliente(int &n_huesp, Huesped huespedes[], int indice){
 	if (indice >= 0 && indice<n_huesp){

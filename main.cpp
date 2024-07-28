@@ -8,7 +8,7 @@ int main(){
 	//Reserva reservahabitacion[30];//declaracion de variable para registro de clientes
 	int opcion;
 	
-	cout<<"\n----BIENVENIDOS AL HOTEL EL 'TELO'----\n"<<endl;
+	cout<<"\n----BIENVENIDOS AL HOTEL EL 'TELO'----\n" << endl;
 	
 	while(opcion!=4){ //Impresion del menu en la pantalla
 	

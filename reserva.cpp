@@ -1,6 +1,40 @@
 #include<iostream>
 #include "reserva.h"
+#include <string>
+
 using namespace std;
+// Clase para representar a un cliente
+class Cliente {
+public:
+    string nombre;
+
+    Cliente(string n = "") : nombre(n) {}
+};
+
+const int CLIENTES=30;//MAXIMO DE CLIENTES EN EL HOTEL
+Cliente clientes[CLIENTES];
+int numClientes = 0; //CONTADOR DE CLIENTES 
+
+/*Dejo espacio para hacer las funciones para reserva.cpp */
+
+//void selecionarClientes
+
+//void fechaInicio 
+
+//void fechaFin
+
+//void cancelarReservas 
+
+void mostrarReservas() {
+    if (numClientes == 0) {
+        cout << "No hay clientes registrados." << endl;
+        return;
+    }
+    cout << "Clientes disponibles:" << endl;
+    for (int i = 0; i < numClientes; ++i) {
+        cout << i + 1 << ". " << clientes[i].nombre << endl;
+    }
+}
 
 void reservaHotel(){
 
@@ -11,7 +45,7 @@ void reservaHotel(){
         cout << "2. Fecha de inicio de la reserva" << endl;
         cout << "3. Fecha de fin de la reserva" << endl;
         cout << "4. Cancelar reservas" << endl;
-        cout << "5. Mostrar reservas activas" << endl;
+        cout << "5. Mostrar reservas activas" << endl; //SE CAMBIO EL LISTADO DE MOSTRAR A LISTAR
         cout << "6. Volver al menú principal" << endl;
 		
         cin >> opcion;
@@ -30,7 +64,7 @@ void reservaHotel(){
                 
                 break;
             case 5:
-                
+                mostrarReservas();
                 break;
             case 6:
                 cout << "Regresando al menu inicial" << endl;
