@@ -41,7 +41,17 @@ void agregarHabitacion(){
 	cout << "Habitacion agregada" << endl;
 	ha_actu++;
 }
-	
+
+void listarHabitaciones(){
+	for ( int i = 0; i< ha_actu; i++){
+		
+		cout << "Nombre: " << hab[i].nombre << endl;
+		cout << "Numero de habitacion: " << hab[i].num_habi << endl;
+		cout << "Tipo de habitacion: " << hab[i].tipo << endl << endl;
+		cout <<"---------------------------------------------" << endl;
+	}
+
+}	
 
 void habitacionesHotel(){
 	
@@ -57,7 +67,7 @@ void habitacionesHotel(){
         cin >> opcion;
         
         cout << endl;
-        // SWITCH PARA SELECIONAR LAS DIFERENTES OPCIONES DEL MENU CARTA
+        // SWITCH PARA SELECIONAR LAS DIFERENTES OPCIONES DEL MENU
         switch (opcion) {
            
             case 1:
@@ -65,8 +75,8 @@ void habitacionesHotel(){
 
                 break;
             case 2:
-            	//actualizarHabitaciones();
-
+            	listarHabitaciones();
+            	
                 break;
             case 3: 
             	break;
