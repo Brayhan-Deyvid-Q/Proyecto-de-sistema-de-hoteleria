@@ -25,6 +25,7 @@ void eliminarCliente(int &n_huesp, Huesped huespedes[], int indice){
 		for(int i=indice; i<n_huesp;++i){
 			huespedes[i]=huespedes[i+1];
 		}
+		n_huesp--;
 	}
 }
 
