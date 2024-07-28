@@ -1,6 +1,8 @@
 #include<iostream>
 #include "habitaciones.h"
+#include <windows.h>
 using namespace std;
+
 
 struct Habitaciones{
 	char nombre[20];
@@ -18,7 +20,16 @@ struct Habitaciones{
 					};
 
 int ha_actu = 8; //habitaciones actuales
-	
+
+int buscarHuesped(Habitaciones ha[], int n){
+	for(int i = 0; i<30; i++){
+		if ( ha[i].num_habi == n){
+			return i;
+		}
+	}
+	return -1;
+}
+
 void agregarHabitacion(){
 	Habitaciones h;
 	
@@ -51,7 +62,32 @@ void listarHabitaciones(){
 		cout <<"---------------------------------------------" << endl;
 	}
 
-}	
+}
+void actualizarHabitacion(){
+	int num;
+	
+	cout << "Digite el numero de habitacion que va editar: " << endl;
+	cin >> num;
+	cout << endl;
+	
+	int numero = buscarHuesped(hab, num);
+	
+	if (numero != -1){
+		cout << "Huesped encontrado" << endl;
+		cout << "Nombre: " << hab[numero].nombre << endl;
+		cout << "Numero de habitacion: " << hab[numero].num_habi << endl;
+		cout << "Tipo de habitacion: " << hab[numero].tipo << endl << endl;
+		
+		cout << "Digite el nuevo numero de habitacion: " << endl;
+		cin >> hab[numero].num_habi;
+		cout << "Digite el nuevo tipo de habitacion: " << endl;
+		cin >> hab[numero].tipo;
+		
+		cout << "Los datos fueron actualizados" << endl;
+	} else{
+		cout << "Huesped no encontrado." << endl;
+	}
+}				
 
 void habitacionesHotel(){
 	
@@ -79,6 +115,7 @@ void habitacionesHotel(){
             	
                 break;
             case 3: 
+            	actualizarHabitacion();
             	break;
             case 4:
             	break;
