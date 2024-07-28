@@ -10,74 +10,75 @@ struct Habitaciones{
 					{"Daniela Alvarez", 2, "Individual"},
 					{"Camila Roque", 3, "Doble"},
 					{"David Mamani", 4, "Doble"},
-					{"Mariela Herrera", 5, "Invidual"},
+					{"Mariela Herrera", 5, "Individual"},
 					{"Diego Rivera", 6, "Triple"},
 					{"Martina Benitez", 7, "Invidual"},
 					{"Alexander Chicaya", 8, "Triple"}
 					
 					};
 
-void mostrarTipoDeHabitaciones(){
+int ha_actu = 8; //habitaciones actuales
+	
+void agregarHabitacion(){
 	Habitaciones h;
 	
 	cin.ignore();
 	
-	cout << "Digíte el nombre del huesped: " << endl;
-	cin.getline(h.nombre, 20);
+	cout << "Digite el nombre del huesped: " << endl;
+	cin.getline(hab[ha_actu].nombre, 20);
 	
-	cout << "Digíte el número de habitación del huesped (9-30): " << endl;
-	cin >> h.num_habi;
+	cout << "Digite el número de habitación del huesped (9-30): " << endl;
+	cin >> hab[ha_actu].num_habi;
 	
 	cin.ignore();
 	
-	cout << "Digíte el tipo de habitación del huesped: " << endl;
+	cout << "Digite el tipo de habitación del huesped: " << endl;
 	cout << "-Individual" << endl;
 	cout << "-Doble" << endl;
 	cout << "-Triple" << endl;
-	cin.getline(h.tipo, 20);
+	cin.getline(hab[ha_actu].tipo, 20);
 	
-	
+	cout << "Habitacion agregada" << endl;
+	ha_actu++;
 }
 	
-			
 
 void habitacionesHotel(){
-	int hab_ac;
 	
 	int opcion;
     do {
-    	cout << "\n" << endl;
-        cout << "1. Mostrar tipos de Habitaciones disponibles" << endl;
-        cout << "2. Editar datos" << endl;
-        cout << "3. Editar habitaciones" << endl;
-        cout << "4. Eliminar habitaciones " << endl;
-        cout << "5. Salir de la aplicacion" << endl;
-        cout << "6. Eliminar huesped" << endl;
+    	cout << "\n";
+        cout << "1. Agregar habitacion" << endl;
+        cout << "2. Listar habitaciones" << endl;
+        cout << "3. Actualizar habitacion" << endl;
+        cout << "4. Eliminar habitacion " << endl;
+        cout << "5. Volver al menu principal." << endl;
+        cout << "Opcion: ";
         cin >> opcion;
+        
+        cout << endl;
         // SWITCH PARA SELECIONAR LAS DIFERENTES OPCIONES DEL MENU CARTA
         switch (opcion) {
+           
             case 1:
-            	mostrarTipoDeHabitaciones();
+                agregarHabitacion();
+
                 break;
             case 2:
-                
+            	//actualizarHabitaciones();
+
                 break;
-            case 3:
-            	
-                break;
+            case 3: 
+            	break;
             case 4:
-                
-                break;
+            	break;
             case 5:
-                
-                break;
-            case 6:
                 cout << "Regresando al menu inicial" << endl;
-                break;
+				break;
             default:
                 cout << "Valor ingresado incorrecto, vuelva a ingresar otro valor" << endl;
                 break;
         }
         
-    } while (opcion != 6); //EN CASO SELECCIONAR EL NUMERO 6 REGRESA AL MENU ANTERIOR
+    } while (opcion != 5); //EN CASO SELECCIONAR EL NUMERO 4 REGRESA AL MENU ANTERIOR
 }
