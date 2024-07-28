@@ -32,6 +32,7 @@ void agregarHuesped(int &n_huesp, Huesped huespedes[]){
 	cin>>huespedes[n_huesp].dni;
 	cout<<endl;
 	n_huesp++;
+	cout<<"Se ha agregado un nuevo cliente de forma exitosa..."<<endl;
 	}else{
 		cout<<"El hotel se encuentra lleno en este momento";
 	}
@@ -53,38 +54,40 @@ void listarclientes(Huesped huespedes[30], int n_huesp){
           cout<<"Nombre: "<<huespedes[i].Nombre<<endl;
           cout<<"NÃºmero: "<<huespedes[i].Telefono<<endl;
           cout<<"NÃºmero de DNI: "<<huespedes[i].dni<<endl;
+          cout<<endl;
 	}
 }
 
 
 void huespedHotel(){
-	int opcion;
+	int opcion, indice;
 	int n_huesp = 8; //Huespedes actuales (contador de huespedes)
 	
 		
     do {
     	cout << "\n" << endl;
         cout << "1. Agregar cliente" << endl;
-        cout << "2. Editar datos" << endl;
-        cout << "3. Eliminar cliente" << endl;
-        cout << "4. Listar clientes" << endl;
-        cout << "5. Regresar al menu principal" << endl;
+        cout << "2. Eliminar cliente" << endl;
+        cout << "3. Listar clientes" << endl;
+        cout << "4. Regresar al menu principal" << endl << endl;
+        cout << "opción: ";
         cin >> opcion;
+        cout << endl;
         // SWITCH PARA SELECIONAR LAS DIFERENTES OPCIONES DEL MENU CARTA
         switch (opcion) {
             case 1:
             	agregarHuesped(n_huesp, huespedes);
                 break;
             case 2:
-                
+            	listarclientes(huespedes, n_huesp);
+            	cout << "Ingrese el índice del cliente que desea eliminar: ";
+            	cin >> indice;
+                eliminarCliente(n_huesp, huespedes, indice);
                 break;
             case 3:
-            	
+            	listarclientes(huespedes, n_huesp);
                 break;
             case 4:
-                listarclientes(huespedes, n_huesp);
-                break;
-            case 5:
                 cout << "Regresando al menu inicial" << endl;
                 break;
             default:
@@ -92,5 +95,5 @@ void huespedHotel(){
                 break;
         }
         
-    } while (opcion != 5); //EN CASO SELECCIONAR EL NUMERO 6 REGRESA AL MENU ANTERIOR
+    } while (opcion != 4); //EN CASO SELECCIONAR EL NUMERO 4 REGRESA AL MENU ANTERIOR
 }
