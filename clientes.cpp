@@ -2,25 +2,6 @@
 #include "clientes.h"
 #include <string>
 using namespace std;
-
-struct Huesped{
-
-char Nombre[30];
-char Telefono[10];
-char dni[10];
-
-};
-
-Huesped huespedes[30] = {{"Franco Avalos", "982827837", "73728372"},
-					{"Daniela Alvarez", "992932892", "48548934"},
-					{"Camila Roque", "938438231", "00565623"},
-					{"David Mamani", "918229385", "67232718"},
-					{"Mariela Herrera", "912718328", "15843498"},
-					{"Diego Rivera", "928382891", "23923390"},
-					{"Martina Benitez", "986594342", "54894383"},
-					{"Alexander Chicaya", "992382831", "10120193"}
-					
-					};
 					
 void agregarHuesped(int &n_huesp, Huesped huespedes[]){
 	if (n_huesp<30){
@@ -59,10 +40,8 @@ void listarclientes(Huesped huespedes[30], int n_huesp){
 }
 
 
-void huespedHotel(){
+void huespedHotel(int &n_huesp, Huesped huespedes[30]){
 	int opcion, indice;
-	int n_huesp = 8; //Huespedes actuales (contador de huespedes)
-	
 		
     do {
     	cout << "\n" << endl;

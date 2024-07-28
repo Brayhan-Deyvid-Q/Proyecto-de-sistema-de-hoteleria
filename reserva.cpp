@@ -3,17 +3,6 @@
 #include <string>
 
 using namespace std;
-// Clase para representar a un cliente
-class Cliente {
-public:
-    string nombre;
-
-    Cliente(string n = "") : nombre(n) {}
-};
-
-const int CLIENTES=30;//MAXIMO DE CLIENTES EN EL HOTEL
-Cliente clientes[CLIENTES];
-int numClientes = 0; //CONTADOR DE CLIENTES 
 
 /*Dejo espacio para hacer las funciones para reserva.cpp */
 
@@ -24,7 +13,7 @@ int numClientes = 0; //CONTADOR DE CLIENTES
 //void fechaFin
 
 //void cancelarReservas 
-
+/*
 void mostrarReservas() {
     if (numClientes == 0) {
         cout << "No hay clientes registrados." << endl;
@@ -97,6 +86,6 @@ void reservaHotel(){
         
     } while (opcion != 6); //EN CASO SELECCIONAR EL NUMERO 6 REGRESA AL MENU ANTERIOR
 }
-
+*/
 
 
